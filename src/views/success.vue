@@ -39,6 +39,7 @@
           </div>
         </form>
         <button class="border border-dark-900 rounded-lg px-3 py-1 float-right my-2 mr-2" @click="submit">Submit</button>
+        <p class="text-red-500" v-if="error">Please select a value</p>
       </div>
       <div v-else>
         <h1 class="mx-2 my-5">
@@ -58,9 +59,14 @@ const intuitiveness = ref<number>();
 
 const submittedFeedback = ref<boolean>(false);
 
+const error = ref(false)
 
 async function submit() {
   submittedFeedback.value = true;
-  await submitFeedback(intuitiveness.value);
+  if (intuitiveness.value) {
+    await submitFeedback(intuitiveness.value);
+  } else {
+    error.value = true;
+  }
 }
 </script>

@@ -5,7 +5,7 @@
       <p class="text-center mt-2">In the following you will be asked to fill out an example sign up form.</p>
       <p class="text-center">The data does not have to be accurate, but should fit the form.</p>
       <p>Example: If the form asks for an email address the only requirement is that the data is shaped like an email address.</p>
-      <button @click="setupAcc" class="bg-red-400 rounded-lg px-2 py-1 float-right mt-2 disabled:bg-red-100" :disabled="disabled | finished">Get started</button>
+      <button @click="setupAcc" class="bg-red-400 rounded-lg px-2 py-1 float-right mt-2 disabled:bg-red-100" :disabled="disabled || finished">Get started</button>
       <div v-if="disabled">
         <p class="text-red-500 text-lg">The survey is currently not available.</p>
       </div>
@@ -17,7 +17,7 @@
 </template>
 
 <script setup lang="ts">
-import { createSession, isAuthenticated } from '../aw.ts';
+import { createSession, isAuthenticated } from '../aw';
 import { useRouter } from 'vue-router';
 import { ref } from 'vue';
 import { useStore } from '../store';
