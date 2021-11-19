@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@types/node': ^16.11.9
   '@vitejs/plugin-vue': ^1.9.3
   appwrite: ^5.0.0
   pinia: ^2.0.4
@@ -13,6 +14,7 @@ specifiers:
   windicss: ^3.2.1
 
 dependencies:
+  '@types/node': 16.11.9
   appwrite: 5.0.0
   pinia: 2.0.4_typescript@4.5.2+vue@3.2.22
   vue: 3.2.22
@@ -88,6 +90,10 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
     dev: true
+
+  /@types/node/16.11.9:
+    resolution: {integrity: sha512-MKmdASMf3LtPzwLyRrFjtFFZ48cMf8jmX5VRYrDQiJa8Ybu5VAmkqBWqKU8fdCwD8ysw4mQ9nrEHvzg6gunR7A==}
+    dev: false
 
   /@types/throttle-debounce/2.1.0:
     resolution: {integrity: sha512-5eQEtSCoESnh2FsiLTxE121IiE60hnMqcb435fShf4bpLRjEu1Eoekht23y6zXS9Ts3l+Szu3TARnTsA0GkOkQ==}

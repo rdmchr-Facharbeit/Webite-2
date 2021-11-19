@@ -10,9 +10,9 @@ type User = {
 
 type Data = {
     userId: string,
-    email: string,
-    password: string,
-    confirmPassword: string,
+    name: string,
+    color: string,
+    movie: string,
     resets: number,
 } & Models.Document;
 

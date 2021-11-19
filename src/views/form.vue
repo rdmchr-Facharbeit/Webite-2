@@ -4,16 +4,16 @@
       <h1 class="text-2xl font-bold text-center mt-2">Sign up</h1>
       <form class="flex flex-col">
         <label>
-          Email
-          <input type="email" v-model="email">
+          Name
+          <input type="text" v-model="email">
         </label>
         <label>
-          Password
-          <input type="password" v-model="password">
+          Favorite Color
+          <input type="text" v-model="password">
         </label>
         <label>
-          Repeat Password
-          <input type="password" v-model="repeatPassword">
+          Favorite Movie
+          <input type="text" v-model="repeatPassword">
         </label>
       </form>
       <div class="flex flex-row justify-end px-5 mb-2">

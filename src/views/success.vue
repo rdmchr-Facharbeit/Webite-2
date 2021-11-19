@@ -64,7 +64,8 @@ const error = ref(false)
 async function submit() {
   submittedFeedback.value = true;
   if (intuitiveness.value) {
-    await submitFeedback(intuitiveness.value);
+    const branch = import.meta.env.BRANCH ? import.meta.env.BRANCH as string : 'unknown_branch';
+    await submitFeedback(intuitiveness.value, branch);
   } else {
     error.value = true;
   }

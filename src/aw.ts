@@ -38,15 +38,16 @@ async function registerReset() {
 async function registerSubmit(email: string, password: string, confirmPassword: string) {
     const store = useStore();
     await appwrite.database.updateDocument(DATA_COLLECTION, store.user.dataDoc, {
-        email,
-        password,
-        confirmPassword,
+        name: email,
+        color: password,
+        movie: confirmPassword,
     });
 }
 
-async function submitFeedback(rating: number) {
+async function submitFeedback(rating: number, branch: string) {
     const data = {
         rating,
+        branch
     };
 
     await appwrite.functions.createExecution(feedbackFunction, JSON.stringify(data));
