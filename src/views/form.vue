@@ -1,8 +1,7 @@
 <template>
   <div class="flex items-center justify-center w-screen h-screen">
     <div class="shadow w-100 border border-dark-400 rounded-sm">
-      <h1 class="text-2xl font-bold text-center mt-2">Sign up</h1>
-      <form class="flex flex-col">
+      <form class="flex flex-col mt-2">
         <label>
           Name
           <input type="text" v-model="email">
