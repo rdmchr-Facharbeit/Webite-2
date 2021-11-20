@@ -20,7 +20,6 @@
         <button type="submit" @click="submit" class="border border-dark-900 rounded-lg px-3 py-1 mt-2">Sign up</button>
         <button type="submit" @click="clear" class="border border-dark-900 rounded-lg px-3 py-1 mt-2">Reset</button>
       </div>
-      <p class="text-red-500 mx-2">This does not have to be accurate data. No account will be created.</p>
     </div>
   </div>
 </template>
