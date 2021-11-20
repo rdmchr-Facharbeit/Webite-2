@@ -16,7 +16,7 @@
         </label>
       </form>
       <div class="flex flex-row justify-between px-5 mb-2">
-        <button type="submit" @click="clear" class="border border-dark-900 rounded-lg px-3 py-1 mt-2 bg-lime-400">Reset</button>
+        <button type="reset" @click="clear" class="border border-dark-900 rounded-lg px-3 py-1 mt-2 bg-lime-400">Reset</button>
         <button type="submit" @click="submit" class="border border-dark-900 rounded-lg px-3 py-1 mt-2 bg-red-600">Submit</button>
       </div>
     </div>
