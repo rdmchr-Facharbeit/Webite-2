@@ -20,7 +20,6 @@ export const useStore = defineStore('main', {
                 console.log('user', user);
                 if (!user) return false;
                 const $id = user.$id
-                heap.identity($id);
                 const userDoc: User | void = await appwrite.database.listDocuments(USERS_COLLECTION, [`userId=${$id}`]).then((res) => {
                     return res.documents[0] as User;
                 }, (err) => {
