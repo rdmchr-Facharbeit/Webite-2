@@ -38,7 +38,8 @@
             </div>
           </div>
         </form>
-        <button class="border border-dark-900 rounded-lg px-3 py-1 float-right my-2 mr-2" @click="submit">Submit</button>
+        <button class="border border-dark-900 rounded-lg px-3 py-1 float-right my-2 mr-2" @click="submit">Submit
+        </button>
         <p class="text-red-500" v-if="error">Please select a value</p>
       </div>
       <div v-else>
@@ -59,12 +60,12 @@ const intuitiveness = ref<number>();
 
 const submittedFeedback = ref<boolean>(false);
 
-const error = ref(false)
+const error = ref(false);
 
 async function submit() {
   submittedFeedback.value = true;
   if (intuitiveness.value) {
-    const branch = import.meta.env.BRANCH ? import.meta.env.BRANCH as string : 'unknown_branch';
+    const branch = 'DESIGN_ONE'
     await submitFeedback(intuitiveness.value, branch);
   } else {
     error.value = true;
