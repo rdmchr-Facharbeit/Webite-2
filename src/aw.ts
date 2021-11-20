@@ -9,6 +9,7 @@ const DATA_COLLECTION = '619431ff88e21';
 
 const feedbackFunction = '619610d5d2bbe';
 
+
 appwrite
     .setEndpoint('https://api.gettooru.com/v1') // Your Appwrite Endpoint
     .setProject('6193ae37b6810'); // Your project ID
